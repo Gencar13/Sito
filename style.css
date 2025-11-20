@@ -1,0 +1,149 @@
+/* --- TEMA SCURO BASE --- */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1a1a1a; /* Sfondo molto scuro */
+    color: #e0e0e0; /* Testo grigio chiaro per contrasto */
+    line-height: 1.6;
+}
+
+main {
+    padding: 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+h1, h2, h3 {
+    color: #00bcd4; /* Colore azzurro per i titoli */
+}
+
+a {
+    color: #00bcd4;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #00e5ff;
+}
+
+/* --- NAVIGAZIONE (PULSANTI IN ALTO A DESTRA) --- */
+/* --- NAVIGAZIONE (PULSANTI IN ALTO A DESTRA) --- */
+header {
+    background-color: #2c2c2c;
+    padding: 10px 20px;
+    
+    /* NUOVE PROPRIETÀ GRID PER LA CENTRATURA */
+    display: grid;
+    grid-template-columns: 1fr auto 1fr; /* Una colonna flessibile, una colonna automatica, una flessibile */
+    align-items: center;
+}
+
+header h1 {
+    grid-column: 2 / 3; /* Posiziona l'h1 nella colonna centrale */
+    justify-self: center; /* Centra il testo nella sua colonna */
+    margin: 0;
+}
+
+.nav-buttons {
+    grid-column: 3 / 4; /* Posiziona i pulsanti nella colonna di destra */
+    justify-self: end; /* Spinge i pulsanti all'estrema destra */
+}
+
+.nav-buttons a {
+    display: inline-block;
+    background-color: #555;
+    color: white;
+    padding: 10px 15px;
+    margin-left: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.nav-buttons a:hover {
+    background-color: #00bcd4; /* Azzurro al passaggio del mouse */
+    color: #1a1a1a;
+}
+
+/* --- SEZIONE CRITERI DI VALUTAZIONE --- */
+#criteri-valutazione {
+    background-color: #2c2c2c;
+    padding: 30px;
+    border-radius: 8px;
+    margin-bottom: 40px;
+    border-left: 5px solid #00bcd4;
+}
+
+/* --- BOX CATEGORIE (La parte principale della Home) --- */
+.category-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.category-box {
+    /* Forziamo la larghezza per stare in due colonne, sottraendo lo spazio del 'gap' */
+    width: calc(33.333% - 13.333px); 
+    min-width: 250px; 
+    
+    background-color: #333; 
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    transition: transform 0.2s, background-color 0.2s;
+    /* Rimuovi eventuali margini predefiniti dal link <a> se ci sono */
+    display: block; 
+}
+
+.category-box:hover {
+    transform: translateY(-5px); 
+    background-color: #444;
+}
+
+/* Titolo Grande nella Box */
+.category-box h3 {
+    margin-top: 0;
+    margin-bottom: 5px; /* Riduci lo spazio tra titolo e testo */
+    color: #ff9800; /* Arancione */
+    font-size: 1.8em; /* Rendi il titolo più grande */
+}
+
+/* Testo Più Piccolo nella Box */
+.category-box p {
+    font-size: 0.9em; /* Rendi il testo descrittivo più piccolo */
+    color: #b0b0b0; /* Un grigio leggermente più chiaro per il testo */
+}
+
+/* Stile per le sezioni di recensione (usate in pizza.html, etc.) */
+.locale {
+    background-color: #2c2c2c;
+    margin: 20px 0;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+/* --- STILE PER IL PULSANTE LISTA COMPLETA --- */
+
+.full-list-button {
+    display: inline-block;
+    padding: 20px 40px;
+    background-color: #ff9800; /* Arancione acceso */
+    color: #1a1a1a; /* Testo scuro */
+    font-weight: bold;
+    font-size: 1.1em;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.full-list-button:hover {
+    background-color: #ffb74d; /* Arancione più chiaro al passaggio */
+    transform: translateY(-2px); /* Lieve sollevamento */
+}
