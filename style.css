@@ -292,60 +292,33 @@ header h1 {
 /* MODIFICHE SOLO PER CELLULARE (MOBILE)                  */
 /* ====================================================== */
 
-/* ====================================================== */
-/* MODIFICHE SOLO PER CELLULARE (MOBILE)                  */
-/* ====================================================== */
-
 @media (max-width: 768px) {
-    header { grid-template-columns: 1fr !important; text-align: center !important; }
-    header h1 { grid-column: 1 !important; margin-bottom: 10px !important; }
-    .nav-buttons { grid-column: 1 !important; justify-self: center !important; }
+    header { grid-template-columns: 1fr; text-align: center; }
+    header h1 { grid-column: 1; margin-bottom: 10px; }
+    .nav-buttons { grid-column: 1; justify-self: center; }
     
     .category-box { width: 100% !important; }
 
-    /* Forziamo l'header della recensione a comportarsi come blocco */
-    div.recensione-header {
+    /* Titolo sopra e Voto sotto */
+    .recensione-header {
         display: block !important;
-        border-bottom: 2px solid var(--color-primary-green) !important;
-        padding-bottom: 10px !important;
     }
-
-    /* Titolo a tutta riga */
     .recensione-header h2 {
         display: block !important;
-        width: 100% !important;
         margin-right: 0 !important;
         margin-bottom: 5px !important;
-        font-size: 1.5em !important;
     }
-
-    /* VOTO GIGANTE CON SELETTORE RINFORZATO */
-    .recensione-essenziale .recensione-header .voto-rane-header {
+    .voto-rane-header {
         display: block !important;
-        width: 100% !important;
-        font-size: 6em !important;      /* Se è troppo grande, scendi a 5em */
-        line-height: 1 !important;
-        margin-top: 10px !important;
-        margin-bottom: 15px !important;
-        color: var(--color-primary-green) !important;
+        font-size: 3em !important;
     }
 
     /* Link luogo e Torna Su GIALLI */
     .recensione-essenziale .link-mappa {
         color: var(--color-secondary-lime) !important;
-        display: block !important;
-        margin-top: 15px !important;
     }
-
-    .recensione-essenziale .torna-su {
+    .torna-su {
         color: var(--color-secondary-lime) !important;
         text-align: right !important;
-        display: block !important;
-    }
-
-    /* Adattamento foto */
-    .foto-locale img {
-        max-width: 100% !important;
-        height: auto !important;
     }
 }
