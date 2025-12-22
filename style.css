@@ -306,27 +306,37 @@ header h1 {
         width: 100%;
     }
 
-    /* TITOLO E VOTO A CAPO SU CELLULARE */
+    /* Recensione Header a capo */
     .recensione-header {
-        display: block; /* Rimuove il flex per forzare l'andata a capo */
+        display: block; 
     }
-
     .recensione-header h2 {
-        display: block; /* Occupa tutta la riga */
-        margin-right: 0; /* Rimuove lo spazio laterale del PC */
-        margin-bottom: 5px; /* Spazio prima del voto */
+        display: block; 
+        margin-right: 0; 
+        margin-bottom: 5px; 
     }
-
     .voto-rane-header {
-        display: block; /* Il voto va sotto il titolo */
+        display: block; 
         font-size: 2em;
     }
 
-    /* Adattamento immagini */
+    /* Link Mappa Giallo */
+    .recensione-essenziale .link-mappa {
+        color: var(--color-secondary-lime) !important;
+    }
+
+    /* Torna su in basso a destra e Giallo */
+    .torna-su {
+        text-align: right;
+        display: block;
+        color: var(--color-secondary-lime) !important;
+        margin-top: 15px;
+    }
+
+    /* Immagini e margini */
     .foto-locale img {
         max-width: 100%;
     }
-
     .recensione-essenziale {
         margin: 20px 10px;
         padding: 20px;
