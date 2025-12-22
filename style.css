@@ -292,53 +292,52 @@ header h1 {
 /* ====================================================== */
 
 @media (max-width: 768px) {
-    /* Header del sito mobile */
+    /* 1. Header del sito: elementi incolonnati */
     header {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr !important;
         text-align: center;
     }
-    header h1 { grid-column: 1; margin-bottom: 10px; }
-    .nav-buttons { grid-column: 1; justify-self: center; }
-    .nav-buttons a { margin: 5px; padding: 8px 10px; }
+    header h1 { grid-column: 1 !important; margin-bottom: 10px; }
+    .nav-buttons { grid-column: 1 !important; justify-self: center !important; }
 
-    /* Griglia categorie: una colonna */
+    /* 2. Categorie: una per riga */
     .category-box {
-        width: 100%;
+        width: 100% !important;
     }
 
-    /* Recensione Header a capo */
+    /* 3. Titolo e Voto a capo */
     .recensione-header {
-        display: block; 
+        display: block !important;
     }
     .recensione-header h2 {
-        display: block; 
-        margin-right: 0; 
-        margin-bottom: 5px; 
+        display: block !important;
+        margin-right: 0 !important;
+        margin-bottom: 5px !important;
     }
     .voto-rane-header {
-        display: block; 
-        font-size: 2em;
+        display: block !important;
+        font-size: 2em !important;
     }
 
-    /* Link Mappa Giallo */
-    .recensione-essenziale .link-mappa {
+    /* 4. Link Mappa Giallo */
+    .recensione-essenziale a.link-mappa {
         color: var(--color-secondary-lime) !important;
     }
 
-    /* Torna su in basso a destra e Giallo */
+    /* 5. Torna su in basso a destra e Giallo */
     .torna-su {
-        text-align: right;
-        display: block;
+        display: block !important;
+        text-align: right !important;
         color: var(--color-secondary-lime) !important;
-        margin-top: 15px;
+        margin-top: 20px !important;
     }
 
-    /* Immagini e margini */
+    /* 6. Immagini e contenitore */
     .foto-locale img {
-        max-width: 100%;
+        max-width: 100% !important;
     }
     .recensione-essenziale {
-        margin: 20px 10px;
-        padding: 20px;
+        margin: 20px 10px !important;
+        padding: 20px !important;
     }
 }
