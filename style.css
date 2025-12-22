@@ -292,38 +292,42 @@ header h1 {
 /* MODIFICHE SOLO PER CELLULARE (MOBILE)                  */
 /* ====================================================== */
 
+/* ====================================================== */
+/* MODIFICHE SOLO PER CELLULARE (MOBILE)                  */
+/* ====================================================== */
+
 @media (max-width: 768px) {
     header { grid-template-columns: 1fr !important; text-align: center !important; }
     header h1 { grid-column: 1 !important; margin-bottom: 10px !important; }
     .nav-buttons { grid-column: 1 !important; justify-self: center !important; }
     
-    .category-grid { display: block !important; }
-    .category-box { width: 100% !important; margin-bottom: 15px !important; }
+    .category-box { width: 100% !important; }
 
-    /* Forzatura Header Recensione */
-    .recensione-header {
+    /* Forziamo l'header della recensione a comportarsi come blocco */
+    div.recensione-header {
         display: block !important;
-        height: auto !important;      /* Permette al contenitore di espandersi */
-        min-height: 100px !important; /* Forza spazio per il voto gigante */
-        padding-bottom: 15px !important;
+        border-bottom: 2px solid var(--color-primary-green) !important;
+        padding-bottom: 10px !important;
     }
 
+    /* Titolo a tutta riga */
     .recensione-header h2 {
         display: block !important;
+        width: 100% !important;
         margin-right: 0 !important;
-        margin-bottom: 10px !important;
+        margin-bottom: 5px !important;
         font-size: 1.5em !important;
     }
 
-    /* VOTO GIGANTE - Proviamo con 6em per vedere il cambiamento netto */
-    .voto-rane-header {
+    /* VOTO GIGANTE CON SELETTORE RINFORZATO */
+    .recensione-essenziale .recensione-header .voto-rane-header {
         display: block !important;
-        font-size: 6em !important;      /* Valore molto alto per testare */
-        line-height: 0.9 !important;    /* Stringe lo spazio verticale tra le rane */
-        margin-top: 5px !important;
-        margin-bottom: 20px !important;
-        overflow: visible !important;   /* Evita che il voto venga tagliato */
         width: 100% !important;
+        font-size: 6em !important;      /* Se è troppo grande, scendi a 5em */
+        line-height: 1 !important;
+        margin-top: 10px !important;
+        margin-bottom: 15px !important;
+        color: var(--color-primary-green) !important;
     }
 
     /* Link luogo e Torna Su GIALLI */
@@ -332,10 +336,16 @@ header h1 {
         display: block !important;
         margin-top: 15px !important;
     }
-    
-    .torna-su {
+
+    .recensione-essenziale .torna-su {
         color: var(--color-secondary-lime) !important;
         text-align: right !important;
         display: block !important;
+    }
+
+    /* Adattamento foto */
+    .foto-locale img {
+        max-width: 100% !important;
+        height: auto !important;
     }
 }
