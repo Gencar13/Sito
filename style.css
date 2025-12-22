@@ -312,7 +312,7 @@ header h1 {
     /* MODIFICA QUI: Usiamo un selettore più specifico per forzare il rimpicciolimento */
     .recensione-essenziale .voto-rane-header {
         display: block !important;
-        font-size: 28px !important; /* Prova con 28px o 30px per rimpicciolire */
+        font-size: 8px !important; /* Prova con 28px o 30px per rimpicciolire */
         line-height: 1.2 !important;
         margin-top: 5px !important;
     }
