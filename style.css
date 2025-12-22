@@ -1,10 +1,20 @@
-/* --- TEMA SCURO BASE --- */
+/* --- TEMA SCURO FOCALIZZATO SUL VERDE (RANE) --- */
+
+/* DEFINIZIONE COLORI (Variabili CSS per comodità, se non le supporta il browser, usare i valori diretti) */
+:root {
+    --color-primary-green: #69F0AE; /* Verde brillante neon (Rana) */
+    --color-secondary-lime: #F4FF81; /* Giallo-verde per hover e accenti */
+    --color-background-dark: #1a1a1a;
+    --color-foreground-dark: #2c2c2c;
+    --color-text-light: #e0e0e0;
+}
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #1a1a1a; /* Sfondo molto scuro */
-    color: #e0e0e0; /* Testo grigio chiaro per contrasto */
+    background-color: var(--color-background-dark); /* Sfondo molto scuro */
+    color: var(--color-text-light); /* Testo grigio chiaro per contrasto */
     line-height: 1.6;
 }
 
@@ -15,39 +25,39 @@ main {
 }
 
 h1, h2, h3 {
-    color: #00bcd4; /* Colore azzurro per i titoli */
+    color: var(--color-primary-green); /* Verde brillante per i titoli */
 }
 
 a {
-    color: #00bcd4;
+    color: var(--color-primary-green);
     text-decoration: none;
+    transition: color 0.3s; /* Aggiunto effetto di transizione */
 }
 
 a:hover {
-    color: #00e5ff;
+    color: var(--color-secondary-lime); /* Giallo lime al passaggio del mouse */
 }
 
 /* --- NAVIGAZIONE (PULSANTI IN ALTO A DESTRA) --- */
-/* --- NAVIGAZIONE (PULSANTI IN ALTO A DESTRA) --- */
 header {
-    background-color: #2c2c2c;
+    background-color: var(--color-foreground-dark);
     padding: 10px 20px;
     
     /* NUOVE PROPRIETÀ GRID PER LA CENTRATURA */
     display: grid;
-    grid-template-columns: 1fr auto 1fr; /* Una colonna flessibile, una colonna automatica, una flessibile */
+    grid-template-columns: 1fr auto 1fr;
     align-items: center;
 }
 
 header h1 {
-    grid-column: 2 / 3; /* Posiziona l'h1 nella colonna centrale */
-    justify-self: center; /* Centra il testo nella sua colonna */
+    grid-column: 2 / 3;
+    justify-self: center;
     margin: 0;
 }
 
 .nav-buttons {
-    grid-column: 3 / 4; /* Posiziona i pulsanti nella colonna di destra */
-    justify-self: end; /* Spinge i pulsanti all'estrema destra */
+    grid-column: 3 / 4;
+    justify-self: end;
 }
 
 .nav-buttons a {
@@ -62,17 +72,18 @@ header h1 {
 }
 
 .nav-buttons a:hover {
-    background-color: #00bcd4; /* Azzurro al passaggio del mouse */
-    color: #1a1a1a;
+    background-color: var(--color-primary-green); /* Verde al passaggio del mouse */
+    color: var(--color-background-dark); /* Testo scuro sul pulsante verde */
 }
 
 /* --- SEZIONE CRITERI DI VALUTAZIONE --- */
 #criteri-valutazione {
-    background-color: #2c2c2c;
+    background-color: var(--color-foreground-dark);
     padding: 30px;
     border-radius: 8px;
     margin-bottom: 40px;
-    border-left: 5px solid #00bcd4;
+    /* BORDO VERDE PER L'ACCENTO */
+    border-left: 5px solid var(--color-primary-green); 
 }
 
 /* --- BOX CATEGORIE (La parte principale della Home) --- */
@@ -84,8 +95,7 @@ header h1 {
 }
 
 .category-box {
-    /* Forziamo la larghezza per stare in due colonne, sottraendo lo spazio del 'gap' */
-    width: calc(33.333% - 13.333px); 
+    width: calc(28% - 10px); 
     min-width: 250px; 
     
     background-color: #333; 
@@ -95,7 +105,6 @@ header h1 {
     cursor: pointer;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     transition: transform 0.2s, background-color 0.2s;
-    /* Rimuovi eventuali margini predefiniti dal link <a> se ci sono */
     display: block; 
 }
 
@@ -107,33 +116,25 @@ header h1 {
 /* Titolo Grande nella Box */
 .category-box h3 {
     margin-top: 0;
-    margin-bottom: 5px; /* Riduci lo spazio tra titolo e testo */
-    color: #ff9800; /* Arancione */
-    font-size: 1.8em; /* Rendi il titolo più grande */
+    margin-bottom: 5px;
+    color: var(--color-secondary-lime); /* Usiamo il giallo/lime per differenziare */
+    font-size: 1.8em;
 }
 
 /* Testo Più Piccolo nella Box */
 .category-box p {
-    font-size: 0.9em; /* Rendi il testo descrittivo più piccolo */
-    color: #b0b0b0; /* Un grigio leggermente più chiaro per il testo */
+    font-size: 0.9em;
+    color: #b0b0b0;
 }
 
-/* Stile per le sezioni di recensione (usate in pizza.html, etc.) */
-.locale {
-    background-color: #2c2c2c;
-    margin: 20px 0;
-    padding: 25px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
-}
 
 /* --- STILE PER IL PULSANTE LISTA COMPLETA --- */
 
 .full-list-button {
     display: inline-block;
     padding: 20px 40px;
-    background-color: #ff9800; /* Arancione acceso */
-    color: #1a1a1a; /* Testo scuro */
+    background-color: var(--color-primary-green); /* Verde acceso */
+    color: var(--color-background-dark); /* Testo scuro */
     font-weight: bold;
     font-size: 1.1em;
     border-radius: 8px;
@@ -144,6 +145,144 @@ header h1 {
 }
 
 .full-list-button:hover {
-    background-color: #ffb74d; /* Arancione più chiaro al passaggio */
-    transform: translateY(-2px); /* Lieve sollevamento */
+    background-color: var(--color-secondary-lime); /* Giallo lime al passaggio */
+    color: var(--color-background-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+}
+
+
+/* --- STILE TEMPLATE RECENSIONE ESSENZIALE (Pulito e Definitivo) --- */
+
+/* Contenitore principale di ogni singola recensione */
+.recensione-essenziale {
+    background-color: var(--color-foreground-dark);
+    padding: 30px;
+    max-width: 800px;
+    margin: 30px auto;
+    border-radius: 40px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Header: Titolo del Locale e Voto Rane affiancati */
+.recensione-header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 15px;
+    /* Bordo inferiore verde per separazione visiva */
+    border-bottom: 2px solid var(--color-primary-green);
+    padding-bottom: 5px;
+}
+
+.recensione-header h2 {
+    color: var(--color-primary-green); /* Verde Titolo Locale */
+    font-size: 1.8em;
+    margin: 0;
+    margin-right: 30px;
+}
+
+/* Stile per il Voto Rane (accanto al titolo) */
+.voto-rane-header {
+    font-size: 2.5em; /* Aumentato leggermente per risaltare */
+    line-height: 1;
+    color: var(--color-primary-green); /* Assicurati che le rane usino il verde principale */
+}
+
+/* Stile per i Link (es. Google Maps) */
+.recensione-essenziale .link-mappa {
+    display: block;
+    color: var(--color-secondary-lime); /* Giallo lime per i link secondari */
+    text-decoration: none;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.recensione-essenziale .link-mappa:hover {
+    color: var(--color-primary-green);
+}
+
+.separatore-dettagli {
+    border: none;
+    height: 1px;
+    background-color: #444444;
+    margin: 20px 0;
+    width: 100%;
+}
+
+
+/* Stile per Immagini */
+.foto-locale {
+    text-align: center;
+    margin: 30px 0;
+}
+.foto-locale img {
+    max-width: 75%; 
+    width: 100%;
+    height: auto;
+    max-width: 500px; 
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.torna-su {
+    display: block;
+    text-align: right;
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: var(--color-secondary-lime); /* Usiamo il lime per coerenza */
+}
+
+
+
+/* ============================================== */
+/* --- NUOVI STILI: CARICA ALTRO (LOAD MORE) --- */
+/* ============================================== */
+
+/* 1. Stile per nascondere le recensioni extra (usato da JavaScript) */
+.recensione-essenziale.nascosto-iniziale {
+    display: none;
+}
+
+/* 2. Contenitore del pulsante */
+.carica-altro {
+    /* Centra il pulsante "Carica Altro" nella pagina */
+    text-align: center; 
+    margin: 30px 0; /* Aumentato il margine per separare dal contenuto */
+}
+
+/* 3. Stile del Pulsante */
+#caricaPiuLocali {
+    /* Eredita lo stile "full-list-button" ma con un tono leggermente diverso/più piccolo */
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: var(--color-background-dark); /* Sfondo scuro */
+    color: var(--color-primary-green); /* Testo verde acceso */
+    font-weight: bold;
+    font-size: 1em;
+    border-radius: 8px;
+    border: 2px solid var(--color-primary-green); /* Bordo verde neon */
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);
+    transition: background-color 0.3s, color 0.3s, transform 0.2s;
+}
+
+#caricaPiuLocali:hover {
+    background-color: var(--color-primary-green); /* Sfondo diventa verde */
+    color: var(--color-background-dark); /* Testo diventa scuro per contrasto */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+}
+
+
+
+/* Stile per centrare il paragrafo di introduzione */
+.paragrafo-centrale {
+    /* Centra il testo all'interno del paragrafo */
+    text-align: center;
+    /* Opzionale: assicura che il paragrafo non sia troppo largo */
+    max-width: 800px; 
+    /* Opzionale: centra il blocco del paragrafo stesso sulla pagina */
+    margin-left: auto;
+    margin-right: auto;
 }
