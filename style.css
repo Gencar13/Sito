@@ -292,6 +292,10 @@ header h1 {
 /* MODIFICHE SOLO PER CELLULARE (MOBILE)                  */
 /* ====================================================== */
 
+/* ====================================================== */
+/* MODIFICHE SOLO PER CELLULARE (MOBILE)                  */
+/* ====================================================== */
+
 @media (max-width: 768px) {
     header { grid-template-columns: 1fr; text-align: center; }
     header h1 { grid-column: 1; margin-bottom: 10px; }
@@ -302,20 +306,26 @@ header h1 {
     /* Titolo sopra e Voto sotto */
     .recensione-header {
         display: block !important;
+        padding-bottom: 10px !important; /* Spazio extra sotto la linea verde dell'header */
     }
     .recensione-header h2 {
         display: block !important;
         margin-right: 0 !important;
-        margin-bottom: 5px !important;
+        margin-bottom: 10px !important; /* Aumentato spazio tra titolo e rane */
+        font-size: 1.6em !important; /* Ridimensionato leggermente per dare spazio al voto */
     }
     .voto-rane-header {
         display: block !important;
-        font-size: 4em !important;
+        font-size: 5.5em !important; /* VOTO MOLTO GRANDE */
+        line-height: 1 !important;   /* Evita spazi vuoti eccessivi sopra/sotto */
+        margin-bottom: 15px !important; /* Spazio dopo il voto gigante */
+        letter-spacing: -2px; /* Opzionale: avvicina leggermente le rane se sono troppe */
     }
 
     /* Link luogo e Torna Su GIALLI */
     .recensione-essenziale .link-mappa {
         color: var(--color-secondary-lime) !important;
+        margin-top: 10px !important; /* Spazio extra sopra il link */
     }
     .torna-su {
         color: var(--color-secondary-lime) !important;
