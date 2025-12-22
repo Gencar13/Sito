@@ -292,43 +292,50 @@ header h1 {
 /* MODIFICHE SOLO PER CELLULARE (MOBILE)                  */
 /* ====================================================== */
 
-/* ====================================================== */
-/* MODIFICHE SOLO PER CELLULARE (MOBILE)                  */
-/* ====================================================== */
-
 @media (max-width: 768px) {
-    header { grid-template-columns: 1fr; text-align: center; }
-    header h1 { grid-column: 1; margin-bottom: 10px; }
-    .nav-buttons { grid-column: 1; justify-self: center; }
+    header { grid-template-columns: 1fr !important; text-align: center !important; }
+    header h1 { grid-column: 1 !important; margin-bottom: 10px !important; }
+    .nav-buttons { grid-column: 1 !important; justify-self: center !important; }
     
-    .category-box { width: 100% !important; }
+    .category-grid { display: block !important; }
+    .category-box { width: 100% !important; margin-bottom: 15px !important; }
 
-    /* Titolo sopra e Voto sotto */
+    /* Forzatura Header Recensione */
     .recensione-header {
         display: block !important;
-        padding-bottom: 10px !important; /* Spazio extra sotto la linea verde dell'header */
+        height: auto !important;      /* Permette al contenitore di espandersi */
+        min-height: 100px !important; /* Forza spazio per il voto gigante */
+        padding-bottom: 15px !important;
     }
+
     .recensione-header h2 {
         display: block !important;
         margin-right: 0 !important;
-        margin-bottom: 10px !important; /* Aumentato spazio tra titolo e rane */
-        font-size: 1.6em !important; /* Ridimensionato leggermente per dare spazio al voto */
+        margin-bottom: 10px !important;
+        font-size: 1.5em !important;
     }
+
+    /* VOTO GIGANTE - Proviamo con 6em per vedere il cambiamento netto */
     .voto-rane-header {
         display: block !important;
-        font-size: 5.5em !important; /* VOTO MOLTO GRANDE */
-        line-height: 1 !important;   /* Evita spazi vuoti eccessivi sopra/sotto */
-        margin-bottom: 15px !important; /* Spazio dopo il voto gigante */
-        letter-spacing: -2px; /* Opzionale: avvicina leggermente le rane se sono troppe */
+        font-size: 6em !important;      /* Valore molto alto per testare */
+        line-height: 0.9 !important;    /* Stringe lo spazio verticale tra le rane */
+        margin-top: 5px !important;
+        margin-bottom: 20px !important;
+        overflow: visible !important;   /* Evita che il voto venga tagliato */
+        width: 100% !important;
     }
 
     /* Link luogo e Torna Su GIALLI */
     .recensione-essenziale .link-mappa {
         color: var(--color-secondary-lime) !important;
-        margin-top: 10px !important; /* Spazio extra sopra il link */
+        display: block !important;
+        margin-top: 15px !important;
     }
+    
     .torna-su {
         color: var(--color-secondary-lime) !important;
         text-align: right !important;
+        display: block !important;
     }
 }
