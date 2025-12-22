@@ -309,7 +309,7 @@ header h1 {
         margin-bottom: 5px !important;
     }
     .voto-rane-header {
-        display: block !important;
+        display: block;
         font-size: 1em !important;
     }
 
