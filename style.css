@@ -310,7 +310,9 @@ header h1 {
     }
     .voto-rane-header {
         display: block !important;
-        font-size: 2em !important;
+        font-size: 3em !important;
+        /* --- AGGIUNTO SPAZIO SOTTO IL VOTO --- */
+        margin-bottom: 20px !important;
     }
 
     /* Link luogo e Torna Su GIALLI */
