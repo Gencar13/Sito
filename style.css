@@ -308,9 +308,13 @@ header h1 {
         margin-right: 0 !important;
         margin-bottom: 5px !important;
     }
-    .voto-rane-header {
-        display: block;
-        font-size: 1em !important;
+
+    /* MODIFICA QUI: Usiamo un selettore più specifico per forzare il rimpicciolimento */
+    .recensione-essenziale .voto-rane-header {
+        display: block !important;
+        font-size: 28px !important; /* Prova con 28px o 30px per rimpicciolire */
+        line-height: 1.2 !important;
+        margin-top: 5px !important;
     }
 
     /* Link luogo e Torna Su GIALLI */
