@@ -292,20 +292,13 @@ header h1 {
 /* ====================================================== */
 
 @media (max-width: 768px) {
-    /* 1. Header del sito: elementi incolonnati */
-    header {
-        grid-template-columns: 1fr !important;
-        text-align: center;
-    }
-    header h1 { grid-column: 1 !important; margin-bottom: 10px; }
-    .nav-buttons { grid-column: 1 !important; justify-self: center !important; }
+    header { grid-template-columns: 1fr; text-align: center; }
+    header h1 { grid-column: 1; margin-bottom: 10px; }
+    .nav-buttons { grid-column: 1; justify-self: center; }
+    
+    .category-box { width: 100% !important; }
 
-    /* 2. Categorie: una per riga */
-    .category-box {
-        width: 100% !important;
-    }
-
-    /* 3. Titolo e Voto a capo */
+    /* Titolo sopra e Voto sotto */
     .recensione-header {
         display: block !important;
     }
@@ -319,25 +312,12 @@ header h1 {
         font-size: 2em !important;
     }
 
-    /* 4. Link Mappa Giallo */
-    .recensione-essenziale a.link-mappa {
+    /* Link luogo e Torna Su GIALLI */
+    .recensione-essenziale .link-mappa {
         color: var(--color-secondary-lime) !important;
     }
-
-    /* 5. Torna su in basso a destra e Giallo */
     .torna-su {
-        display: block !important;
-        text-align: right !important;
         color: var(--color-secondary-lime) !important;
-        margin-top: 20px !important;
-    }
-
-    /* 6. Immagini e contenitore */
-    .foto-locale img {
-        max-width: 100% !important;
-    }
-    .recensione-essenziale {
-        margin: 20px 10px !important;
-        padding: 20px !important;
+        text-align: right !important;
     }
 }
