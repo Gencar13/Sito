@@ -189,6 +189,15 @@ header h1 {
     color: var(--color-primary-green); /* Assicurati che le rane usino il verde principale */
 }
 
+/* Stile per l'anno di visita */
+.anno-visita {
+    font-size: 1.1em; /* Più piccolo del titolo per gerarchia visiva */
+    color: #FFFFFF;
+    margin-left: auto; /* Questo spinge l'anno tutto a destra nell'header */
+    opacity: 0.8; /* Opzionale: lo rende leggermente meno marcato */
+    font-weight: bold;
+}
+
 /* Stile per i Link (es. Google Maps) */
 .recensione-essenziale .link-mappa {
     display: block;
@@ -321,4 +330,32 @@ header h1 {
         color: var(--color-secondary-lime) !important;
         text-align: right !important;
     }
+}
+
+/* novità */
+
+/* Stile per il pulsante Esplora in Home
+.explore-button {
+    background-color: #69F0AE;
+    color: #121212;
+    padding: 20px 40px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.5rem;
+    transition: transform 0.3s ease;
+    display: inline-block;
+}
+
+.explore-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(105, 240, 174, 0.4);
+} */
+
+/* Titoli delle nazioni */
+.nation-title {
+    border-left: 4px solid #69F0AE;
+    padding-left: 15px;
+    margin-top: 40px;
+    margin-bottom: 20px;
 }
