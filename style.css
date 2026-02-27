@@ -304,7 +304,7 @@ header h1 {
 @media (max-width: 768px) {
     header { grid-template-columns: 1fr; text-align: center; }
     header h1 { grid-column: 1; margin-bottom: 10px; }
-    .nav-buttons { grid-column: 1; justify-self: center; }
+    .nav-buttons { grid-column: 1; justify-self: end; }
     
     .category-box { width: 100% !important; }
 
